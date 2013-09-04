@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# https://devcenter.heroku.com/articles/nodejs
+foreman start
