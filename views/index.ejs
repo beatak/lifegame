@@ -1,1 +1,20 @@
-OH HAI
+<% layout('layout.ejs') -%>
+
+<h1>Conway's Game of Life</h1>
+
+<div>
+  Board is
+  <span id="status"></span>
+</div>
+
+<div>
+  Generation is
+  <span id="generation">0</span>
+</div>
+
+<div id="board"><canvas id="boardcanvas"></canvas></div>
+
+
+<button id="status-toggle">toggle</button>
+
+

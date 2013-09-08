@@ -1,0 +1,17 @@
+
+
+body {
+  background-color: #FFF;
+}
+
+
+#board {
+  width: 400px;
+  height: 400px;
+  outline: 1px solid #F00;
+}
+
+#boardcanvas {
+  width: 400px;
+  height: 400px;
+}

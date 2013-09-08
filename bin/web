@@ -1,4 +1,7 @@
 #!/bin/sh
 
 # https://devcenter.heroku.com/articles/nodejs
-foreman start
+# foreman start
+
+# see http://stackoverflow.com/questions/13727961/
+rerun --background foreman start web
