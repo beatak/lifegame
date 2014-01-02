@@ -5,6 +5,10 @@
     console.log( 'init' );
 
     var canvas = $('#boardcanvas')[0];
+    if (!canvas) {
+      console.log( 'no canvas found: exiting.' );
+      return;
+    }
     var gameview = window.gameview = new GameView( canvas );
     var board = window.board = new Board( gameview );
     gameview.showStatus( false );
@@ -16,7 +20,7 @@
       if (window.board.isRunning) {
         window.board.turnOff();
       }
-      else {
+        else {
         window.board.turnOn();
       }
     });
@@ -103,6 +107,7 @@ var GameView = window.GameView = function (elm) {
   this.status = $('#status')[0];
   this.generation = $('#generation')[0];
   this.context = elm.getContext('2d');
+  this.context.imageSmoothingEnabled = false; 
 
   this.cells = new CellCollection(this.width, this.height, this.context);
   this.cells.render();
